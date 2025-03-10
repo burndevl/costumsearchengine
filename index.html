@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://github.com/burndevl/burnism0/blob/main/bg.gif?raw=true') no-repeat center center fixed;
+            background-size: cover;
+            flex-direction: column;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .time-box, .search-box {
+            width: 350px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            margin-bottom: 20px;
+        }
+        .time-box div {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .time-box .datetime {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-left: -10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            outline: none;
+        }
+        input[type="text"]::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        img {
+            margin-top: 100px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .datetime {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .txt {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const dateOptions = { timeZone: 'Asia/Jakarta', day: '2-digit', month: 'long', year: 'numeric' };
+            document.getElementById('datetime').innerHTML = `<span>${new Intl.DateTimeFormat('id-ID', dateOptions).format(now)}</span> | <span>${new Intl.DateTimeFormat('id-ID', options).format(now)}</span>`;
+        }
+        setInterval(updateTime, 1000);
+        window.onload = updateTime;
+    </script>
+</head>
+<body>
+    <div class="time-box">
+        <div class="txt">Hallo Burnism0!</div>
+        <div class="datetime" id="datetime">Loading...</div>
+    </div>
+    <div class="search-box">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Search Here..." required>
+            <!-- <button type="submit">Search</button> -->
+        </form>
+    </div>
+    <footer> <a href="https://github.com/burndevl" > <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""></a></footer>
+</body>
+</html>
