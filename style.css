@@ -1,0 +1,117 @@
+/* Styling untuk seluruh halaman */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('wall.gif') no-repeat center center fixed;
+    background-size: cover;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.time-box {
+    width: 320px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.time-box .txt {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.datetime {
+    font-size: 20px;
+    margin-top: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Box pencarian */
+.search-box {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Input pencarian */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    text-align: center;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Container untuk tombol */
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Tombol pencarian */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Gaya gambar dalam tombol */
+button img {
+    width: 30px; /* Sesuaikan ukuran ikon */
+    height: 30px;
+    transition: transform 0.2s, filter 0.2s;
+    border-radius: 10px;
+}
+
+/* Efek hover pada tombol */
+button img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+footer a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+    
+}
+
+/* Efek hover pada ikon GitHub */
+footer a img:hover {
+    transform: scale(1.2);
+}
