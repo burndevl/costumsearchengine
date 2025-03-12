@@ -17,7 +17,7 @@ window.onload = updateTime;
 function search(engine) {
     const query = document.getElementById('search-input').value;
     if (!query) {
-        alert('Masukkan kata kunci terlebih dahulu!');
+        // alert('Masukkan kata kunci terlebih dahulu!');
         return;
     }
 
